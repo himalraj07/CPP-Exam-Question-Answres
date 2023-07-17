@@ -1,7 +1,4 @@
 /*
-    Name : Himal Raj Bhusal
-    Roll Number : 8
-
     Q2. Write a class Account with data members acc no, balance, and min_balance(static).
     • Include methods for reading and displaying values of objects.
     • Define static member function to display min_balance.
@@ -10,6 +7,7 @@
 
 #include <iostream>
 using namespace std;
+
 class Account
 {
     int acc_no, balance;
@@ -22,6 +20,7 @@ public:
         cin >> min_bal;
         cout << endl;
     }
+
     void getd()
     {
         cout << "Enter your account number : ";
@@ -29,6 +28,7 @@ public:
         cout << "Enter your balance : ";
         cin >> balance;
     }
+
     void dis()
     {
         cout << "Your account no. : " << acc_no << endl;
@@ -41,6 +41,7 @@ public:
         cout << "Your minimun balance : " << min_bal << endl;
     }
 };
+
 int Account::min_bal;
 int main()
 {
@@ -54,6 +55,7 @@ int main()
         a[i].getd();
         cout << endl;
     }
+
     for (int i = 0; i < 5; i++)
     {
         cout << "******************************" << endl;
@@ -62,5 +64,6 @@ int main()
         a[i].dis1();
         cout << endl;
     }
+
     return 0;
 }

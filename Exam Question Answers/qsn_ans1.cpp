@@ -1,16 +1,10 @@
 /*
-    Name : Himal Raj Bhusal
-    Roll Number : 8
-
-    Q1. Create a class author with attributes name and qualification. Also create a
-    class publication with pname. From these classes derive a class book having
-    attribute title and price. Each of the three classes should have a getdata() method
-    to get their data from user. The classes should have putdata( ) method to display
-    the data. Create instances of the class book in main.
+    Q1. Create a class author with attributes name and qualification. Also create a class publication with pname. From these classes derive a class book having attribute title and price. Each of the three classes should have a getdata() method to get their data from user. The classes should have putdata( ) method to display the data. Create instances of the class book in main.
 */
 
 #include <iostream>
 using namespace std;
+
 class author
 {
 protected:
@@ -30,6 +24,7 @@ public:
         cout << "Qualification of the author : " << qualification << endl;
     }
 };
+
 class publication
 {
 protected:
@@ -46,6 +41,7 @@ public:
         cout << "Name of the publication : " << pname << endl;
     }
 };
+
 class book : public author, public publication
 {
 protected:
@@ -70,6 +66,7 @@ public:
         cout << "Price of the book: " << price << endl;
     }
 };
+
 int main()
 {
     book b;

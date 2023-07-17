@@ -6,32 +6,38 @@
     > Create an object of the class and use it to display the information.
 */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class Room
 {
-    private:
-    int length,breadth,height;
-    public:
+private:
+    int length, breadth, height;
+
+public:
     Room(int l, int b, int h)
     {
-        length=l;
-        breadth=b;
-        height=h;
+        length = l;
+        breadth = b;
+        height = h;
     }
+
     void displayArea()
     {
-        cout<<"Area of the room:"<<length * breadth<<endl;
+        cout << "Area of the room:" << length * breadth << endl;
     }
+
     void displayVolume()
     {
-        cout<<"Volume of the room:"<<length * breadth * height<<endl;
+        cout << "Volume of the room:" << length * breadth * height << endl;
     }
 };
+
 int main()
 {
-    Room room(20,30,25);
+    Room room(20, 30, 25);
     room.displayArea();
     room.displayVolume();
+
     return 0;
 }

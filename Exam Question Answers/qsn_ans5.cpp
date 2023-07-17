@@ -1,12 +1,10 @@
 /*
-    Name : Himal Raj Bhusal
-    Roll Number : 8
-
     Q5. Design a class to represent a bank account with data members name, account-number, account-type, and balance and functions to assign initial values, to deposit an amount, to withdraw an amount after checking balance, and to display the name and balance.
 */
 
 #include <iostream>
 using namespace std;
+
 class bank
 {
     string name, acc_typ;
@@ -20,6 +18,7 @@ public:
         balance = bal;
         acc_no = accno;
     }
+
     void deposit()
     {
         int dep;
@@ -27,6 +26,7 @@ public:
         cin >> dep;
         balance += dep;
     }
+
     void withdraw()
     {
         int wth;
@@ -34,6 +34,7 @@ public:
         cin >> wth;
         balance -= wth;
     }
+
     void dis()
     {
         cout << "Name : " << name << endl;
@@ -42,6 +43,7 @@ public:
         cout << "Balance : " << balance << endl;
     }
 };
+
 int main()
 {
     int bal, accno;
@@ -51,19 +53,25 @@ int main()
     cout << "Enter your bank details :" << endl;
     cout << "Enter your name : ";
     cin >> nm;
+
     cout << "Enter your Account number : ";
     cin >> accno;
+
     cout << "Enter your Accout type : ";
     cin >> acct;
+
     cout << "Enter your balance : ";
     cin >> bal;
+
     bank b;
     b.getdata(nm, acct, bal, accno);
     b.deposit();
     b.withdraw();
     cout << endl;
+
     cout << "Displaying data about your bank details ..." << endl;
     b.dis();
     cout << endl;
+
     return 0;
 }

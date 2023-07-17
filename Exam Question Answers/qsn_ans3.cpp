@@ -1,7 +1,4 @@
 /*
-    Name : Himal Raj Bhusal
-    Roll Number : 8
-
     Q3. Write a program according to the specification given below:
     • Create a class Teacher with data members tid and subject and member functions for reading and displaying data members.
     • Create another class Staff with data members sid and position, and member functions for reading and displaying data members.
@@ -11,6 +8,7 @@
 
 #include <iostream>
 using namespace std;
+
 class Teacher
 {
     string subject;
@@ -26,6 +24,7 @@ public:
         cout << "Enter the subject of the teacher : ";
         cin >> subject;
     }
+
     void dis()
     {
         cout << endl;
@@ -34,6 +33,7 @@ public:
         cout << "Subject : " << subject << endl;
     }
 };
+
 class Staff
 {
     int sid;
@@ -49,6 +49,7 @@ public:
         cout << "Enter position of the staff : ";
         cin >> position;
     }
+
     void dis()
     {
         cout << endl;
@@ -57,6 +58,7 @@ public:
         cout << "Position : " << position << endl;
     }
 };
+
 class Coordinator : public Teacher, public Staff
 {
     string department;
@@ -71,6 +73,7 @@ public:
         cout << "Enter department of the coordinator : ";
         cin >> department;
     }
+
     void dis()
     {
         Teacher::dis();
@@ -80,6 +83,7 @@ public:
         cout << "Department of coordiantor : " << department << endl;
     }
 };
+
 int main()
 {
     cout << endl;
@@ -96,5 +100,6 @@ int main()
     c2.read();
     c2.dis();
     cout << endl;
+    
     return 0;
 }
